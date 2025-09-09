@@ -21,8 +21,8 @@ const ContentBody = ({ children }: Omit<EmailLayoutProps, 'previewText'>) => {
     <Section className="bg-[#F8EBFB] px-3">
       <Section className="mt-[32px]">
         <Img
-          src="https://res.cloudinary.com/duceqjs0b/image/upload/v1754647158/Frame_11_qxruk7.png"
-          // src="/static/logo.png"
+          // src="https://res.cloudinary.com/duceqjs0b/image/upload/v1754647158/Frame_11_qxruk7.png"
+          src="/static/logo.png"
           width="230"
           height="55"
           alt="Edulinks Logo"

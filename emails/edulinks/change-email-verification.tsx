@@ -1,13 +1,7 @@
-import {
-  Button,
-  Column,
-  Heading,
-  Row,
-  Section,
-  Text,
-} from '@react-email/components';
+import { Button, Column, Row, Section, Text } from '@react-email/components';
 import { EmailLayout } from '../../components/layout';
 import { EmailSignature } from '../../components/email-signature';
+import { EmailHeading } from '../../components/heading';
 
 type Props = {
   name: string;
@@ -44,9 +38,7 @@ export const Code = ({
 const ChangeEmailVerification = ({ newEmail, name, ...rest }: Props) => {
   return (
     <EmailLayout>
-      <Heading as="h1" className="font-bold text-[20px] md:text-[30px] mt-0">
-        Your Edulinks.ng Email Update
-      </Heading>
+      <EmailHeading title="Your Edulinks.ng Email Update" />
       <Text className="mb-0 font-semibold text-[#333333]">Hi {name},</Text>
       <Text className="mt-1 text-[#333333]">
         We received a request to change your Edulinks.ng email to{' '}

@@ -6,9 +6,9 @@ import {
   Section,
   Text,
 } from '@react-email/components';
-import { HowToSection } from '../../how-to';
 import { EmailLayout } from '../../components/layout';
 import { EmailSignature } from '../../components/email-signature';
+import { HowToSection } from '../../components/how-to';
 
 type Props = {
   verificationURL: string;

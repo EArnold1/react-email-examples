@@ -1,6 +1,7 @@
-import { Heading, Text } from '@react-email/components';
+import { Text } from '@react-email/components';
 import { EmailLayout } from '../../components/layout';
 import { EmailSignature } from '../../components/email-signature';
+import { EmailHeading } from '../../components/heading';
 
 type Props = {
   name: string;
@@ -9,9 +10,7 @@ type Props = {
 const ChangePasswordNotice = ({ name }: Props) => {
   return (
     <EmailLayout previewText="Your Edulinks.ng password has been updated. Contact support immediately if this wasn't you.">
-      <Heading as="h1" className="font-bold text-[15px] md:text-[25px] mt-0">
-        Your Password Has Been Successfully Updated
-      </Heading>
+      <EmailHeading title="Your Password Has Been Successfully Updated" />
       <Text className="mb-0 font-semibold text-[#333333]">Hi {name},</Text>
       <Text className="mt-1 text-[#333333]">
         We received a request to change your Edulinks.ng password. If you did
