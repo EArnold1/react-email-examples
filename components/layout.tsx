@@ -16,10 +16,12 @@ interface EmailLayoutProps {
   previewText?: string;
 }
 
+// using padding 8px for sm and padding 16px for md upwards
+
 const ContentBody = ({ children }: Omit<EmailLayoutProps, 'previewText'>) => {
   return (
-    <Section className="bg-[#F8EBFB] px-3">
-      <Section className="mt-[32px]">
+    <Section className="bg-[#F8EBFB] p-4">
+      <Section className="my-4">
         <Img
           // src="https://res.cloudinary.com/duceqjs0b/image/upload/v1754647158/Frame_11_qxruk7.png"
           src="/static/logo.png"
@@ -29,8 +31,8 @@ const ContentBody = ({ children }: Omit<EmailLayoutProps, 'previewText'>) => {
           className="mx-auto my-0"
         />
       </Section>
-      <Container className="my-[40px] max-w-[700px] rounded-xl border border-solid border-[#eaeaea] bg-white p-[24px] md:p-[32px]">
-        <Section className="px-3">{children}</Section>
+      <Container className="max-w-[700px] rounded-xl border border-solid border-[#eaeaea] bg-white p-2 md:p-4">
+        <Section className="p-2 md:p-4">{children}</Section>
         <Footer />
       </Container>
     </Section>

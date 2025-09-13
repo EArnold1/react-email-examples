@@ -6,7 +6,7 @@ type Props = {
 
 export const EmailHeading = ({ title }: Props) => {
   return (
-    <Heading as="h1" className="mt-0 text-[20px] font-bold lg:text-[32px]">
+    <Heading as="h1" className="my-0 text-[20px] font-bold lg:text-[32px]">
       {title}
     </Heading>
   );

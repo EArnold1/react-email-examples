@@ -1,14 +1,8 @@
-import {
-  Button,
-  Column,
-  Heading,
-  Row,
-  Section,
-  Text,
-} from '@react-email/components';
+import { Button, Column, Row, Section, Text } from '@react-email/components';
 import { EmailLayout } from '../../components/layout';
 import { EmailSignature } from '../../components/email-signature';
 import { HowToSection } from '../../components/how-to';
+import { EmailHeading } from '../../components/heading';
 
 type Props = {
   verificationURL: string;
@@ -51,9 +45,7 @@ const Code = ({ verificationCode, verificationURL }: Props) => {
 const AccountSetupVerification = (props: Props) => {
   return (
     <EmailLayout>
-      <Heading as="h1" className="font-bold text-[20px] md:text-[30px]">
-        Welcome to Edulinks.ng
-      </Heading>
+      <EmailHeading title="Welcome to Edulinks.ng" />
       <Text className="mb-0 font-semibold">Hi There 👋 </Text>
       <Text className="mt-1">You are almost there,</Text>
       <Code {...props} />

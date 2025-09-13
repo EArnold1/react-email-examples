@@ -128,7 +128,7 @@ const FooterTable = () => (
 );
 
 export const Footer = () => (
-  <Section className="mt-[20px] px-3 text-center">
+  <Section className="p-2 md:p-4 text-center">
     <Text className="font-md">
       <strong>Need Help?</strong> Reach us via WhatsApp at +2349034445390 or
       email support@edulinks.ng and you can also reach us on our social media

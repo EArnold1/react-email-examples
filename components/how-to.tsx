@@ -22,7 +22,7 @@ const HowToCard = ({ alt, title, src, description }: CardProps) => (
     <Text className="my-3 leading-[24px] font-semibold text-gray-900">
       {title}
     </Text>
-    <Text className="my-3 text-gray-500">{description}</Text>
+    <Text className="mt-3 text-gray-500">{description}</Text>
   </>
 );
 
@@ -53,11 +53,11 @@ const cards = [
 const MobileIllustration = () => {
   const baseURL = getBaseURL();
   return (
-    <Section className="w-full px-3 md:hidden">
+    <Section className="w-full p-2 md:hidden">
       {cards.map(({ src, ...card }) => (
         <Section
           key={card.alt}
-          className="mx-auto my-3 w-5/6 rounded-md bg-white p-2"
+          className="mx-auto mt-4 w-full rounded-md bg-white p-4"
         >
           <HowToCard {...card} src={`${baseURL}/${src}`} />
         </Section>
@@ -70,8 +70,8 @@ export const HowToSection = () => {
   const baseURL = getBaseURL();
 
   return (
-    <Section className="rounded-md bg-[#F8EBFB] py-4">
-      <Row className="mb-6 hidden md:block">
+    <Section className="rounded-md bg-[#F8EBFB] p-2 md:p-4">
+      <Row className="my-4 hidden md:block">
         <Column className="w-[45%] px-3 align-top">
           <Text className="m-0 font-semibold">
             Discover How to Engage, Learn, and Connect on Edulinks.ng
@@ -87,7 +87,7 @@ export const HowToSection = () => {
       </Row>
 
       {/* for mobile screen size */}
-      <Section className="mb-6 md:hidden">
+      <Section className="my-2 md:hidden">
         <Text className="m-0 px-3 font-semibold">
           Discover How to Engage, Learn, and Connect on Edulinks.ng
         </Text>
@@ -101,7 +101,7 @@ export const HowToSection = () => {
       {/* md screen size upwards */}
       <Row className="hidden w-full [border-spacing:12px] md:block">
         {cards.map(({ src, ...card }) => (
-          <Column key={card.alt} className="w-[200px] rounded-md bg-white p-2">
+          <Column key={card.alt} className="w-[200px] rounded-md bg-white p-4">
             <HowToCard {...card} src={`${baseURL}/${src}`} />
           </Column>
         ))}
