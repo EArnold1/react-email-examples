@@ -18,11 +18,17 @@ interface CardProps extends ImgProps {
 
 const HowToCard = ({ alt, title, src, description }: CardProps) => (
   <>
-    <Img alt={alt} height="48" src={src} width="48" className="mx-auto" />
+    <Img
+      alt={alt}
+      height="48"
+      src={src}
+      width="48"
+      className="mx-auto size-10"
+    />
     <Text className="my-3 leading-[24px] font-semibold text-gray-900">
       {title}
     </Text>
-    <Text className="mt-3 text-gray-500">{description}</Text>
+    <Text className="text-gray-500 h-[96px]">{description}</Text>
   </>
 );
 
